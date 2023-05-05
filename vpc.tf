@@ -2,7 +2,7 @@
 module "vpc" {
     source  = "terraform-google-modules/network/google"
     version = "~> 3.0"
-
+    
     project_id   = var.project
     network_name = "example-vpc"
     routing_mode = "GLOBAL"
@@ -20,7 +20,7 @@ module "vpc" {
             {
                 range_name    = "subnet-01-secondary-01"
                 ip_cidr_range = "192.168.64.0/24"
-            },
+            }
         ]
 
         subnet-02 = []
